@@ -23,7 +23,7 @@ public class Questions {
             {"Jupiter", "Pluto", "Mercury", "Earth"},
             {"Uranus", "Venus", "Mars", "Saturn"},
             {"Saturn", "Pluto", "Uranus", "Earth"},
-            {"Venus", "Mercury", "Pluto", "Mars"},
+            {"Neptune", "Mercury", "Pluto", "Mars"},
             {"Mercury", "Venus", "Mars", "Pluto"}
     };
 
