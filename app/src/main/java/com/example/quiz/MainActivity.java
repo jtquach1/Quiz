@@ -59,9 +59,17 @@ public class MainActivity extends AppCompatActivity {
                 if (lastQuestion()) {
                     gameOver();
                 }
-            // Get the next question
-            currentQuestion = currentQuestion + 1;
-            updateQuestion(currentQuestion);
+                // Get the next question, hardcoded
+                switch (currentQuestion) {
+                    case 0: currentQuestion = 1; break;
+                    case 1: currentQuestion = 3; break;
+                    case 2: currentQuestion = 7; break;
+                    case 3: currentQuestion = 5; break;
+                    case 4: currentQuestion = 6; break;
+                    case 7: currentQuestion = 9; break;
+                    case 8: currentQuestion = 9; break;
+                }
+                updateQuestion(currentQuestion);
             }
         });
         answer2.setOnClickListener(new View.OnClickListener() {
@@ -77,8 +85,16 @@ public class MainActivity extends AppCompatActivity {
                 if (lastQuestion()) {
                     gameOver();
                 }
-                // Get the next question
-                currentQuestion = currentQuestion + 2;
+                // Get the next question, hardcoded
+                switch (currentQuestion) {
+                    case 0: currentQuestion = 2; break;
+                    case 1: currentQuestion = 4; break;
+                    case 2: currentQuestion = 8; break;
+                    case 3: currentQuestion = 5; break;
+                    case 4: currentQuestion = 6; break;
+                    case 7: currentQuestion = 10; break;
+                    case 8: currentQuestion = 10; break;
+                }
                 updateQuestion(currentQuestion);
             }
         });
@@ -95,8 +111,16 @@ public class MainActivity extends AppCompatActivity {
                 if (lastQuestion()) {
                     gameOver();
                 }
-                // Get the next question
-                currentQuestion = currentQuestion + 3;
+                // Get the next question, hardcoded
+                switch (currentQuestion) {
+                    case 0: currentQuestion = 1; break;
+                    case 1: currentQuestion = 3; break;
+                    case 2: currentQuestion = 7; break;
+                    case 3: currentQuestion = 5; break;
+                    case 4: currentQuestion = 6; break;
+                    case 7: currentQuestion = 9; break;
+                    case 8: currentQuestion = 9; break;
+                }
                 updateQuestion(currentQuestion);
             }
         });
@@ -113,8 +137,16 @@ public class MainActivity extends AppCompatActivity {
                 if (lastQuestion()) {
                     gameOver();
                 }
-                // Get the next question
-                currentQuestion = currentQuestion + 4;
+                // Get the next question, hardcoded
+                switch (currentQuestion) {
+                    case 0: currentQuestion = 2; break;
+                    case 1: currentQuestion = 4; break;
+                    case 2: currentQuestion = 8; break;
+                    case 3: currentQuestion = 5; break;
+                    case 4: currentQuestion = 6; break;
+                    case 7: currentQuestion = 10; break;
+                    case 8: currentQuestion = 10; break;
+                }
                 updateQuestion(currentQuestion);
             }
         });

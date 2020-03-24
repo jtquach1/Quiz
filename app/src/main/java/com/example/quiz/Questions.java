@@ -5,23 +5,22 @@ public class Questions {
     public String mQuestions[] = {
             // Scenario
             "Janet notices that her daughter Jackie is texting a lot. She wonders if Jackie has a boyfriend. What should Janet do?",
-            // A
+            // A, B
             "Janet decides to talk to Jackie about her texting habits. How should she approach Jackie?",
-            // B
             "Janet secretly gets Jackie's phone and looks at her texts. What might happen next?",
-            // A1
+            // A1, A2
             "Janet approaches Jackie, saying 'I know you're growing up to be a young woman. If you ever need any advice, well, I'm here!'. How might Jackie respond?",
-            // A2
             "Janet approaches Jackie, saying 'I saw you spending too much time on your phone! You shouldn't be talking to boys!'. How might Jackie respond?",
-            // A1 and A2 outcome, game over
+            // A1 outcome, game over
             "After Janet offers Jackie some emotional support, Jackie feels like she can trust her mom.",
+            // A2 outcome, game over
             "Janet and Jackie get into an argument, and Jackie walks away.",
-            // B1
+            // B1, B2
             "Janet approaches Jackie about what she read on her phone. What might Janet say?",
-            // B2
             "Jackie catches her mom reading her texts, saying 'Mom, WHAT are you doing?! Stop going through my phone!'. How might Janet respond?",
-            // B1 and B2 outcome, game over
+            // B1 outcome, game over
             "Janet and Jackie have a big argument that doesn't get resolved.",
+            // B2 outcome, game over
             "Janet and Jackie have a big argument. Jackie doesn't talk to her mom for a few days."
     };
 
