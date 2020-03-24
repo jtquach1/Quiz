@@ -22,17 +22,19 @@ public class MainActivity extends AppCompatActivity {
 
     private String mAnswer;
     private int mScore = 0;
-    private int mQuestionsLength = mQuestions.mQuestions.length;
-
-    Random r;
+//    private int mQuestionsLength = mQuestions.mQuestions.length;
+//
+//    Random r;
+    // Get the scenario
+    private int currentQuestion = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // For randomizing question
-        r = new Random();
+//        // For randomizing question
+//        r = new Random();
 
         // Initialize views
         answer1 = (Button) findViewById(R.id.answer1);
@@ -46,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
         score.setText("Score: " + mScore);
 
         // Initialize question to ask player
-        updateQuestion(r.nextInt(mQuestionsLength));
+//        updateQuestion(r.nextInt(mQuestionsLength));
+        updateQuestion(currentQuestion);
 
         // OnClickListeners for the four choices
         answer1.setOnClickListener(new View.OnClickListener() {
@@ -57,13 +60,17 @@ public class MainActivity extends AppCompatActivity {
                     // Update the score and text
                     mScore++;
                     score.setText("Score: " + mScore);
-                    // Get a random question
-                    updateQuestion(r.nextInt(mQuestionsLength));
                 }
-                // User got question wrong
-                else {
+                // User got to end, 5,6,9,10
+                else if (currentQuestion == 5 ||
+                        currentQuestion == 6 ||
+                        currentQuestion == 9 ||
+                        currentQuestion == 10) {
                     gameOver();
                 }
+            // Get the next question
+            currentQuestion = currentQuestion + 1;
+            updateQuestion(currentQuestion);
             }
         });
         answer2.setOnClickListener(new View.OnClickListener() {
@@ -74,13 +81,17 @@ public class MainActivity extends AppCompatActivity {
                     // Update the score and text
                     mScore++;
                     score.setText("Score: " + mScore);
-                    // Get a random question
-                    updateQuestion(r.nextInt(mQuestionsLength));
                 }
-                // User got question wrong
-                else {
+                // User got to end, 5,6,9,10
+                else if (currentQuestion == 5 ||
+                        currentQuestion == 6 ||
+                        currentQuestion == 9 ||
+                        currentQuestion == 10) {
                     gameOver();
                 }
+                // Get the next question
+                currentQuestion = currentQuestion + 2;
+                updateQuestion(currentQuestion);
             }
         });
         answer3.setOnClickListener(new View.OnClickListener() {
@@ -91,13 +102,17 @@ public class MainActivity extends AppCompatActivity {
                     // Update the score and text
                     mScore++;
                     score.setText("Score: " + mScore);
-                    // Get a random question
-                    updateQuestion(r.nextInt(mQuestionsLength));
                 }
-                // User got question wrong
-                else {
+                // User got to end, 5,6,9,10
+                else if (currentQuestion == 5 ||
+                        currentQuestion == 6 ||
+                        currentQuestion == 9 ||
+                        currentQuestion == 10) {
                     gameOver();
                 }
+                // Get the next question
+                currentQuestion = currentQuestion + 3;
+                updateQuestion(currentQuestion);
             }
         });
         answer4.setOnClickListener(new View.OnClickListener() {
@@ -108,13 +123,17 @@ public class MainActivity extends AppCompatActivity {
                     // Update the score and text
                     mScore++;
                     score.setText("Score: " + mScore);
-                    // Get a random question
-                    updateQuestion(r.nextInt(mQuestionsLength));
                 }
-                // User got question wrong
-                else {
+                // User got to end, 5,6,9,10
+                else if (currentQuestion == 5 ||
+                        currentQuestion == 6 ||
+                        currentQuestion == 9 ||
+                        currentQuestion == 10) {
                     gameOver();
                 }
+                // Get the next question
+                currentQuestion = currentQuestion + 4;
+                updateQuestion(currentQuestion);
             }
         });
     }
