@@ -37,10 +37,16 @@ public class Questions {
             {"Jackie says, 'Alright. Thanks, mom.'", "Jackie says, 'Don't worry about it, mom.'", "", ""},
             // A2
             {"Jackie says, 'Ugh, well what would YOU know?!'", "Jackie says, 'You have no idea what you're talking about.'", "", ""},
+            // A1 and A2 outcome
+            {"Finish game", "", "", ""},
+            {"Finish game", "", "", ""},
             // B1
             {"'Jackie, I just went through your phone, and... I want to talk to you about this boy you're seeing.", "'Jackie, you're too young to be doing this!'", "", ""},
             // B2
             {"'Jackie, I'm your mother. You know I care about you.'", "'I can't believe the way you're showing yourself off to this boy.'", "'Jackie, you're too young to be doing this!'", ""},
+            // B1 and B2 outcome
+            {"Finish game", "", "", ""},
+            {"Finish game", "", "", ""},
     };
 
     // Bank of correct answers, or with "least worst options"
@@ -50,8 +56,12 @@ public class Questions {
             "She finds out that Jackie is talking to a boy, and will go to Jackie with what she read.",
             "Jackie says, 'Alright. Thanks, mom.'",
             "Jackie says, 'Ugh, well what would YOU know?!'",
+            "Finish game",
+            "Finish game",
             "'Jackie, I just went through your phone, and... I want to talk to you about this boy you're seeing.",
-            "'Jackie, I'm your mother. You know I care about you.'"
+            "'Jackie, I'm your mother. You know I care about you.'",
+            "Finish game",
+            "Finish game"
     };
 
     // Get a question based on index in sample questions

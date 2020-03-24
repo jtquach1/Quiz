@@ -22,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String mAnswer;
     private int mScore = 0;
-//    private int mQuestionsLength = mQuestions.mQuestions.length;
-//
-//    Random r;
+
     // Get the scenario
     private int currentQuestion = 0;
 
@@ -32,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        // For randomizing question
-//        r = new Random();
 
         // Initialize views
         answer1 = (Button) findViewById(R.id.answer1);
@@ -48,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         score.setText("Score: " + mScore);
 
         // Initialize question to ask player
-//        updateQuestion(r.nextInt(mQuestionsLength));
         updateQuestion(currentQuestion);
 
         // OnClickListeners for the four choices
@@ -61,11 +55,8 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                 }
-                // User got to end, 5,6,9,10
-                else if (currentQuestion == 5 ||
-                        currentQuestion == 6 ||
-                        currentQuestion == 9 ||
-                        currentQuestion == 10) {
+                // User got to last question of the scenario
+                if (lastQuestion()) {
                     gameOver();
                 }
             // Get the next question
@@ -82,11 +73,8 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                 }
-                // User got to end, 5,6,9,10
-                else if (currentQuestion == 5 ||
-                        currentQuestion == 6 ||
-                        currentQuestion == 9 ||
-                        currentQuestion == 10) {
+                // User got to last question of the scenario
+                if (lastQuestion()) {
                     gameOver();
                 }
                 // Get the next question
@@ -103,11 +91,8 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                 }
-                // User got to end, 5,6,9,10
-                else if (currentQuestion == 5 ||
-                        currentQuestion == 6 ||
-                        currentQuestion == 9 ||
-                        currentQuestion == 10) {
+                // User got to last question of the scenario
+                if (lastQuestion()) {
                     gameOver();
                 }
                 // Get the next question
@@ -124,11 +109,8 @@ public class MainActivity extends AppCompatActivity {
                     mScore++;
                     score.setText("Score: " + mScore);
                 }
-                // User got to end, 5,6,9,10
-                else if (currentQuestion == 5 ||
-                        currentQuestion == 6 ||
-                        currentQuestion == 9 ||
-                        currentQuestion == 10) {
+                // User got to last question of the scenario
+                if (lastQuestion()) {
                     gameOver();
                 }
                 // Get the next question
@@ -147,6 +129,14 @@ public class MainActivity extends AppCompatActivity {
         answer4.setText(mQuestions.getChoice4(num));
         // Get correct answer for question num
         mAnswer = mQuestions.getCorrectAnswer(num);
+    }
+
+    // Did user get to the last question of the path in a scenario?
+    private boolean lastQuestion() {
+        return currentQuestion == 5 ||
+                currentQuestion == 6 ||
+                currentQuestion == 9 ||
+                currentQuestion == 10;
     }
 
     // Prompts a game over
