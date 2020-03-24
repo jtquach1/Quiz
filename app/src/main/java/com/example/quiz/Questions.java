@@ -1,6 +1,49 @@
 package com.example.quiz;
 
 public class Questions {
+    // Sample scenarios
+    public String mScenarios[] = {
+            "Janet notices that her daughter Jackie is texting a lot. She wonders if Jackie has a boyfriend. What should Janet do?"
+    };
+
+    // Sample choices
+    public String mChoices[] = {
+            // Mom: Choice 1
+            "Talk to Jackie.",
+            // Mom: Choice 2
+            "Secretly get Jackie's phone and look at her texts."
+    };
+
+    public String mChoicesA[] = {
+            "Approach Jackie with openness and ability to listen.",
+            "Approach Jackie nervous and defensive."
+    };
+
+    public String mChoicesB[] = {
+            "She finds out that Jackie is talking to a boy, and will go to Jackie with what she read.",
+            "Jackie catches her mom reading her text messages."
+    };
+
+    public String mDialogueA[] = {
+            "'Hon, I know you're growing up to be a young woman. If you ever need any advice, well, I'm here!'",
+            "'I saw you spending too much time on your phone! You shouldn't be talking to boys!'"
+    };
+
+    public String mDialogueB[] = {
+            "'Jackie, what were you thinking? I can't believe you!'",
+            "'Mom! WHAT are you doing?!'"
+    };
+
+    public String mOutcomeA[] = {
+            "'Thanks, mom.'",
+            "'Ugh, well what would YOU know?!'"
+    };
+
+    public String mOutcomeB[] = {
+            "Janet and Jackie get into a big argument that doesn't get resolved."
+            "Janet and Jackie argue and Jackie doesn't talk to her mom for a few days."
+    };
+
     // Sample questions
     public String mQuestions[] = {
             "Which is the first planet in the Solar system?",
