@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private String mAnswer;
     private int mScore = 0;
 
-    // Get the scenario
-    private int currentQuestion = 0;
+    // Get the scenario, begin picking mom or daughter
+    private int currentQuestion = 11;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 // Get the next question, hardcoded
                 switch (currentQuestion) {
+                    // Mother
                     case 0: currentQuestion = 1; break;
                     case 1: currentQuestion = 3; break;
                     case 2: currentQuestion = 7; break;
@@ -68,6 +69,15 @@ public class MainActivity extends AppCompatActivity {
                     case 4: currentQuestion = 6; break;
                     case 7: currentQuestion = 9; break;
                     case 8: currentQuestion = 9; break;
+                    // Daughter
+                    case 11: currentQuestion = 0; break;
+                    case 12: currentQuestion = 13; break;
+                    case 13: currentQuestion = 15; break;
+                    case 14: currentQuestion = 21; break;
+                    case 15: currentQuestion = 17; break;
+                    case 16: currentQuestion = 19; break;
+                    case 21: currentQuestion = 23; break;
+                    case 22: currentQuestion = 24; break;
                 }
                 updateQuestion(currentQuestion);
             }
@@ -87,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 // Get the next question, hardcoded
                 switch (currentQuestion) {
+                    // Mother
                     case 0: currentQuestion = 2; break;
                     case 1: currentQuestion = 4; break;
                     case 2: currentQuestion = 8; break;
@@ -94,6 +105,15 @@ public class MainActivity extends AppCompatActivity {
                     case 4: currentQuestion = 6; break;
                     case 7: currentQuestion = 10; break;
                     case 8: currentQuestion = 10; break;
+                    // Daughter
+                    case 11: currentQuestion = 12; break;
+                    case 12: currentQuestion = 14; break;
+                    case 13: currentQuestion = 16; break;
+                    case 14: currentQuestion = 22; break;
+                    case 15: currentQuestion = 18; break;
+                    case 16: currentQuestion = 20; break;
+                    case 21: currentQuestion = 23; break;
+                    case 22: currentQuestion = 24; break;
                 }
                 updateQuestion(currentQuestion);
             }
@@ -113,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 // Get the next question, hardcoded
                 switch (currentQuestion) {
+                    // Mother
                     case 0: currentQuestion = 1; break;
                     case 1: currentQuestion = 3; break;
                     case 2: currentQuestion = 7; break;
@@ -120,6 +141,15 @@ public class MainActivity extends AppCompatActivity {
                     case 4: currentQuestion = 6; break;
                     case 7: currentQuestion = 9; break;
                     case 8: currentQuestion = 9; break;
+                    // Daughter
+                    case 11: currentQuestion = 0; break;
+                    case 12: currentQuestion = 13; break;
+                    case 13: currentQuestion = 15; break;
+                    case 14: currentQuestion = 21; break;
+                    case 15: currentQuestion = 17; break;
+                    case 16: currentQuestion = 19; break;
+                    case 21: currentQuestion = 23; break;
+                    case 22: currentQuestion = 24; break;
                 }
                 updateQuestion(currentQuestion);
             }
@@ -139,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 // Get the next question, hardcoded
                 switch (currentQuestion) {
+                    // Mother
                     case 0: currentQuestion = 2; break;
                     case 1: currentQuestion = 4; break;
                     case 2: currentQuestion = 8; break;
@@ -146,6 +177,15 @@ public class MainActivity extends AppCompatActivity {
                     case 4: currentQuestion = 6; break;
                     case 7: currentQuestion = 10; break;
                     case 8: currentQuestion = 10; break;
+                    // Daughter
+                    case 11: currentQuestion = 12; break;
+                    case 12: currentQuestion = 14; break;
+                    case 13: currentQuestion = 16; break;
+                    case 14: currentQuestion = 22; break;
+                    case 15: currentQuestion = 18; break;
+                    case 16: currentQuestion = 20; break;
+                    case 21: currentQuestion = 23; break;
+                    case 22: currentQuestion = 24; break;
                 }
                 updateQuestion(currentQuestion);
             }
@@ -168,7 +208,13 @@ public class MainActivity extends AppCompatActivity {
         return currentQuestion == 5 ||
                 currentQuestion == 6 ||
                 currentQuestion == 9 ||
-                currentQuestion == 10;
+                currentQuestion == 10 ||
+                currentQuestion == 17 ||
+                currentQuestion == 18 ||
+                currentQuestion == 19 ||
+                currentQuestion == 20 ||
+                currentQuestion == 23 ||
+                currentQuestion == 24;
     }
 
     // Prompts a game over
